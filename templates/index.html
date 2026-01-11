@@ -1,0 +1,22 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam Checker</title>
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Spam Email Detector</h2>
+        <form method="POST">
+            <textarea name="email" rows="10" cols="50" placeholder="Enter email text..." required></textarea><br><br>
+            <button type="submit">Check</button>
+        </form>
+        {% if result %}
+            <p><strong>Result:</strong> {{ result }}</p>
+        {% endif %}
+    </div>
+    
+</body>
+</html>
